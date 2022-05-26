@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "../css/CollatzCalculator.css"
 
 const CollatzCalculator = ({setData}) => {
 

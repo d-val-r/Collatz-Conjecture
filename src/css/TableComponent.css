@@ -1,0 +1,13 @@
+#collatz-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#collatz-table, th, td {
+    border: 1px solid;
+    border-color: whitesmoke;
+}
+#collatz-table tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
