@@ -1,4 +1,19 @@
 #user-input-component {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.child {
+    margin-top: 15px;
+}
+
+#form-field * {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#user-input-component button {
+    width: 10%;
 }

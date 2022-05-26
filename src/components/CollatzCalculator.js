@@ -22,11 +22,13 @@ const CollatzCalculator = ({setData}) => {
 
     return (
         <div id='user-input-component'>
-            <label>
-                Number:
-                <textarea value={num} onChange={(event) => setNum(Number(event.target.value))}></textarea>
-            </label>
-            <button onClick={() => calculate(num)}>Calculate</button>
+            <form id="form-field">
+                <label for="textarea" className='child'>
+                    Number:
+                    <textarea id="textarea" value={num} onChange={(event) => setNum(Number(event.target.value))}></textarea>
+                </label>
+            </form>
+            <button className='child' onClick={() => calculate(num)}>Calculate</button>
         </div>
     )
 }
