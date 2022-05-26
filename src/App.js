@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import '../node_modules/react-vis/dist/style.css';
-import {XYPlot, LineSeries} from 'react-vis';
-import { HorizontalGridLines, VerticalGridLines, XAxis, YAxis } from 'react-vis/dist';
+import GraphComponent from './components/GraphComponent';
 
 function App() {
   const data = [
@@ -18,15 +17,7 @@ function App() {
     {x: 9, y: 0}
   ];
   return (
-    <div className="App">
-      <XYPlot height={300} width={300}>
-        <VerticalGridLines />
-        <HorizontalGridLines />
-        <XAxis />
-        <YAxis />
-        <LineSeries data={data} />
-      </XYPlot>
-    </div>
+    <GraphComponent data={data} />
   );
 }
 
