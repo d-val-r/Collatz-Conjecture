@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import '../node_modules/react-vis/dist/style.css';
 import GraphComponent from './components/GraphComponent';
+import CollatzCalculator from './components/CollatzCalculator';
 
 function App() {
-  const data = [
+  const dummyData = [
     {x: 0, y: 8},
     {x: 1, y: 5},
     {x: 2, y: 4},
@@ -16,8 +17,15 @@ function App() {
     {x: 8, y: 2},
     {x: 9, y: 0}
   ];
+
+  const [data, setData] = useState([]);
+
+
   return (
-    <GraphComponent data={data} />
+    <>
+      <GraphComponent data={data} />
+      <CollatzCalculator setData={setData}/>
+    </>
   );
 }
 
