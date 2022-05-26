@@ -7,8 +7,8 @@ const CollatzCalculator = ({setData}) => {
     const calculate = (number) => {
         let data = [{x: 0, y: number}];
         let count = 1;
-        while (number != 1 && count < 10000) {
-            if (number % 2 == 0) {
+        while (number !== 1 && count < 10000) {
+            if (number % 2 === 0) {
                 number /= 2;
             } else {
                 number = (3 * number) + 1;
@@ -16,7 +16,6 @@ const CollatzCalculator = ({setData}) => {
             data = data.concat({x: count++, y: number});
         }
 
-        console.log(data);
         setData(data);
     }
 

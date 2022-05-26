@@ -5,13 +5,6 @@ import {XYPlot, LineSeries} from 'react-vis';
 import { HorizontalGridLines, VerticalGridLines, XAxis, YAxis } from 'react-vis/dist';
 
 const GraphComponent = ({data}) => {
-    const dummyData = [
-        {x: 0, y: 0},
-        {x: 1, y: 1},
-        {x: 2, y: 2}
-    ];
-
-
 
     return (
         <div id="graph-component">
