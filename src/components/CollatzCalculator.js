@@ -6,7 +6,7 @@ const CollatzCalculator = ({setData}) => {
     const [num, setNum] = useState(0);
 
     const calculate = (number) => {
-        if (number <= 0) {
+        if (number <= 0 || isNaN(number)) {
             setData([]);
             return;
         }
@@ -29,7 +29,7 @@ const CollatzCalculator = ({setData}) => {
             <form id="form-field">
                 <label for="textarea" className='child'>
                     Number:
-                    <textarea id="textarea" value={num} onChange={(event) => setNum(Number(event.target.value))}></textarea>
+                    <textarea id="textarea" value={num} onChange={(event) => isNaN(event.target.value) ? setNum(0) : setNum(Number(event.target.value))}></textarea>
                 </label>
             </form>
             <div id='button-container'>
