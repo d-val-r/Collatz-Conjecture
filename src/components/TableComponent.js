@@ -5,8 +5,8 @@ const TableComponent = ({data}) => {
     return (
         <table id="collatz-table">
             <tr>
-                <th>Iteration</th>
-                <th>Collatz Value</th>
+                <th hidden={data.length > 0 ? false : true}>Iteration</th>
+                <th hidden={data.length > 0 ? false : true}>Collatz Value</th>
             </tr>
             {data.map(entry => {
                 return (
