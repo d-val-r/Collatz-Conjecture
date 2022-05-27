@@ -6,6 +6,10 @@ const CollatzCalculator = ({setData}) => {
     const [num, setNum] = useState(0);
 
     const calculate = (number) => {
+        if (number <= 0) {
+            setData([]);
+            return;
+        }
         let data = [{x: 0, y: number}];
         let count = 1;
         while (number !== 1 && count < 10000) {
@@ -28,7 +32,10 @@ const CollatzCalculator = ({setData}) => {
                     <textarea id="textarea" value={num} onChange={(event) => setNum(Number(event.target.value))}></textarea>
                 </label>
             </form>
-            <button className='child' onClick={() => calculate(num)}>Calculate</button>
+            <div id='button-container'>
+                <button className='child' onClick={() => calculate(num)}>Calculate</button>
+                <button className='child' onClick={() => setData([])}>Reset</button>
+            </div>
         </div>
     )
 }

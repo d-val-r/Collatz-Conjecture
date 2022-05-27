@@ -3,10 +3,10 @@ import "../css/TableComponent.css";
 
 const TableComponent = ({data}) => {
     return (
-        <table id="collatz-table">
+        <table hidden={data.length > 0 ? false : true} id="collatz-table">
             <tr>
-                <th hidden={data.length > 0 ? false : true}>Iteration</th>
-                <th hidden={data.length > 0 ? false : true}>Collatz Value</th>
+                <th>Iteration</th>
+                <th>Collatz Value</th>
             </tr>
             {data.map(entry => {
                 return (
