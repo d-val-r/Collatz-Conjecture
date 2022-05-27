@@ -9,13 +9,14 @@ function App() {
 
   const [data, setData] = useState([]);
 
-
   return (
-    <>
-      <GraphComponent data={data} />
-      <TableComponent data={data} />
-      <CollatzCalculator setData={setData}/>
-    </>
+    <div className="App">
+      <div className="container">
+        <CollatzCalculator setData={setData}/>
+        <GraphComponent data={data} />
+        <TableComponent data={data} />
+      </div>
+    </div>
   );
 }
 

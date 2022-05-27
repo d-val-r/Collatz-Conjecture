@@ -8,7 +8,7 @@ const GraphComponent = ({data}) => {
 
     return (
         <div id="graph-component">
-        <XYPlot height={300} width={300}>
+        <XYPlot height={300} width={500}>
             <VerticalGridLines />
             <HorizontalGridLines />
             <XAxis />
