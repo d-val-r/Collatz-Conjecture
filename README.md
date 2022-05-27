@@ -15,4 +15,4 @@ Built with React using create-react-app. Styled with CSS.
 
 
 ## Usage
-Clone the project then run `npm start` and visit `localhost:3000` in a browser with JavaScript enabled.
+Deployed on Vercel [here](). Clone the project then run `npm start` and visit `localhost:3000` in a browser with JavaScript enabled.
