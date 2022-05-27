@@ -34,7 +34,7 @@ const CollatzCalculator = ({setData}) => {
             </form>
             <div id='button-container'>
                 <button className='child' onClick={() => calculate(num)}>Calculate</button>
-                <button className='child' onClick={() => setData([])}>Reset</button>
+                <button className='child' onClick={() => {setData([]); setNum(0)}}>Reset</button>
             </div>
         </div>
     )
